@@ -1,0 +1,23 @@
+{
+  "name": "ai-voice-sales-bot",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "cd server && npm run dev",
+    "dev:client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start",
+    "setup": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.80",
+    "@langchain/groq": "^0.2.4",
+    "@langchain/langgraph": "^0.2.74",
+    "zod": "^3.25.76"
+  }
+}
